@@ -1,0 +1,15 @@
+.colonne {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .ranger:after {
+    display: table;
+    clear: both;
+  }
+
+  #conteneurListe{
+      width:80%;
+      margin:auto;
+  }
