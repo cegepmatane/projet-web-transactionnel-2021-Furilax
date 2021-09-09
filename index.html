@@ -8,6 +8,11 @@
 			margin:0;
 			padding:0;
 		}
+
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
 		.nav{
 			background-color: #333;
 			list-style-type:none;
@@ -33,16 +38,31 @@
 		.active {
 			background-color: #aa0404;
 		}
+
+		.parallax {
+			background-image: url("/www/ressources/parallax.jpg");
+			min-height: 500px; 
+			filter: blur(2px);
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	</style>
 </head>
 <body>
 	<header>
+		<div class="parallax"></div>
+		
+		<div style="height:1000px;background-color:white">
+			
 		<ul class="nav">
 			<li><a class="active" href="#accueil">Accueil</a></li>
 			<li><a href="#mission">Notre Mission</a></li>
 			<li><a href="#produits">Nos Produits</a></li>
 			<li><a href="#connexion">Connexion</a></li>
-		  </ul>
+		</ul>
+		  
 	</header>
 	
 	<section id="contenu">
