@@ -3,52 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
-	<style>
-		body {
-			margin:0;
-			padding:0;
-		}
-
-		html {
-			font-family: Arial, Helvetica, sans-serif;
-		}
-
-		.nav{
-			background-color: #333;
-			list-style-type:none;
-			margin:0;
-			padding:0;
-  			overflow: hidden;
-			text-align:center;
-		}
-		.nav li{
-			display:inline;
-		}
-		.nav a{
-			display:inline-block;
-  			text-decoration: none;
-  			color: white;
-			padding:20px;
-		}
-
-		.nav li a:hover:not(.active) {
-			background-color: #111;
-		}
-
-		.active {
-			background-color: #aa0404;
-		}
-
-		.parallax {
-			background-image: url("/www/ressources/parallax.jpg");
-			min-height: 500px; 
-			filter: blur(2px);
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-	</style>
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 	<header>
@@ -56,12 +11,14 @@
 		
 		<div style="height:1000px;background-color:white">
 			
-		<ul class="nav">
+		<ul id="nav">
 			<li><a class="active" href="#accueil">Accueil</a></li>
 			<li><a href="#mission">Notre Mission</a></li>
 			<li><a href="#produits">Nos Produits</a></li>
 			<li><a href="#connexion">Connexion</a></li>
 		</ul>
+
+		<script src="/www/script/menu-sticky.js"></script>
 		  
 	</header>
 	
