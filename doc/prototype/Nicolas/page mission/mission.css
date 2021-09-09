@@ -1,3 +1,4 @@
+
 .image{
     border-radius: 50%;
     width: 350px;
@@ -19,7 +20,10 @@ div .image{
     align-items: flex-start;
     margin:auto;
     margin-bottom: 40px;
-    border-style: solid ;
+    border-style: inset;
+    border-width: 7px;
+    border-color: coral;
+    border-radius: 4px;
 }
 
 .mission{
