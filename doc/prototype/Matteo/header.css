@@ -1,0 +1,57 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav{
+    background-color: #333;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    text-align:center;
+}
+#nav li{
+    display:inline;
+}
+#nav a{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding:20px;
+}
+
+#nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #aa0404;
+}
+
+.parallax {
+    background-image: url("/www/illustration/parallax.jpg");
+    min-height: 500px; 
+    filter: blur(2px);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax center {
+  filter: none !important;
+  text-align: center;
+  font-size: 150px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
