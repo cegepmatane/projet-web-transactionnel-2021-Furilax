@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lobster&effect=neon);
 
 body {
     margin:0;
@@ -112,12 +112,13 @@ html {
     clear: both;
   }
 
-
-
-
-
-
-
+  #conteneurListe h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 75px;
+    font-family: 'Lobster';
+    color: #d04764;
+  }
 
   .produit {
     float: left;
@@ -145,7 +146,6 @@ html {
     font-size: medium;
   }
   
-  /* Clear floats after the columns */
   .ranger:after {
     display: table;
     clear: both;
@@ -154,3 +154,6 @@ html {
   #conteneurListe{
       width:100%;
   }
+
+
+  
