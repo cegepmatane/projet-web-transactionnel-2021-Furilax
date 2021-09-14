@@ -11,18 +11,18 @@ $logo = LogoDAO::lireLogoParId($id);
 ?>
 
 
-
+<link rel="stylesheet" href="logo.css">
 <?php include "header.php"?>
 <section id="conteneurGlobale">
-                    <div id="conteneurProduit">
-                    <img class="imageProduit" src="illustration/<?=$logo["image"];?>" alt="Synergy STRATA MANAGEMENT">
+                    <div id="conteneurLogo">
+                    <img class="imageLogo" src="illustration/<?=$logo["image"];?>" alt="Synergy STRATA MANAGEMENT">
                     </div>
                     <div id="conteneurInfos">
                         <h1><?=$logo["nom"];?></h1>
-                        <p class="infosProduit"><?=$logo["description"];?></p>
-                        <p class="infosProduit">Auteur : <?=$logo["auteur"];?></p>
-                        <p class="infosProduit">Prix : <?=$logo["prix"];?></p>
-                        <p class="infosProduit">Quantité : Ceci est un produit unique</p>
+                        <p class="infosLogo"><?=$logo["description"];?></p>
+                        <p class="infosLogo">Auteur : <?=$logo["auteur"];?></p>
+                        <p class="infosLogo">Prix : <?=$logo["prix"];?></p>
+                        <p class="infosLogo">Quantité : Ceci est un produit unique</p>
                         <Button id="btnPanier">Ajouter au panier</Button>
                     </div>
             </section>

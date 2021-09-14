@@ -5,6 +5,7 @@ $listeLogos = LogoDAO::listerLogos();
 //print_r($listeProduits);
 ?>
 
+<link rel="stylesheet" href="logos.css">
 <?php include "header.php"?>
 
 <section id="conteneurListe">
@@ -12,10 +13,10 @@ $listeLogos = LogoDAO::listerLogos();
 <?php
         	foreach($listeLogos as $logo){       
 ?>
-			<div class="produit">
-				<a href="produit.html"><img class="imageProduit" src="illustration/<?=$logo["image"];?>" alt="" ></a>
+			<div class="logo">
+				<a href="logo.html"><img class="imageLogo" src="illustration/<?=$logo["image"];?>" alt="" ></a>
 				<h2><?=$logo["nom"]; ?></h2>
-				<p class = "descriptionProduit"><?=$logo["description"];?></p>
+				<p class = "descriptionLogo"><?=$logo["description"];?></p>
 			</div>
 	</section>
 <?php
