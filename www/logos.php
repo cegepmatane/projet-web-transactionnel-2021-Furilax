@@ -14,9 +14,9 @@ $listeLogos = LogoDAO::listerLogos();
         	foreach($listeLogos as $logo){       
 ?>
 			<div class="logo">
-				<a href="logo.html"><img class="imageLogo" src="illustration/<?=$logo["image"];?>" alt="" ></a>
-				<h2><?=$logo["nom"]; ?></h2>
-				<p class = "descriptionLogo"><?=$logo["description"];?></p>
+				<a href="logo.php?logo=<?=$logo->id?>"><img class="imageLogo" src="illustration/<?=$logo["image"];?>" alt="" ></a>
+				<h2><?=formater($logo->nom)?></h2>
+				<p class = "descriptionLogo"><?=formater($logo->description)?></p>
 			</div>
 	</section>
 <?php

@@ -3,7 +3,7 @@
 require CHEMIN_ACCESSEUR . "LogoDAO.php";
 
 //$id = $_GET["id"];
-$id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
+$id = filter_var($_GET['logo'],FILTER_VALIDATE_INT); 
 //echo "id:" . $id;
 $logo = LogoDAO::lireLogoParId($id);
 
@@ -19,9 +19,9 @@ $logo = LogoDAO::lireLogoParId($id);
                     </div>
                     <div id="conteneurInfos">
                         <h1><?=$logo["nom"];?></h1>
-                        <p class="infosLogo"><?=$logo["description"];?></p>
-                        <p class="infosLogo">Auteur : <?=$logo["auteur"];?></p>
-                        <p class="infosLogo">Prix : <?=$logo["prix"];?></p>
+                        <p class="infosLogo"><?=formater($logo->description)?></p>
+                        <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
+                        <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
                         <p class="infosLogo">Quantité : Ceci est un produit unique</p>
                         <Button id="btnPanier">Ajouter au panier</Button>
                     </div>
