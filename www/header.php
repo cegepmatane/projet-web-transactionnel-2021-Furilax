@@ -1,3 +1,4 @@
+<html>
 <header>
 		<div class="parallax">
 			<center><b>Pick Your Logo</b></center>
