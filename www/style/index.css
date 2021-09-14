@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster&effect=neon);
+
+body {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#nav{
+    background-color: #333;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    text-align:center;
+    z-index: 1;
+}
+#nav li{
+    display:inline;
+}
+#nav a{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding:20px;
+}
+
+#nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #aa0404;
+}
+
+.parallax {
+    background-image: url("/www/illustration/parallax.jpg");
+    min-height: 500px; 
+    filter: blur(2px);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax center {
+  filter: none !important;
+  text-align: center;
+  font-size: 150px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #description {
+      background-color: rgba(212, 62, 62, 0.384);
+      width: 60%;
+      height: auto;
+      padding: 10px;
+      margin: auto;
+      margin-top: 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      transition: transform .2s, background-color 1s;
+  }
+
+  #description:hover {
+    background-color: rgba(231, 126, 126, 0.384);
+    transform: scale(1.1);
+  }
+
+  #description h1{
+    text-align: center;
+    color: #d04764; 
+    font-family: 'Lobster'; 
+    font-size: 36px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    margin: 0 0 18px; 
+  }
+
+  #description h2 {
+    font-family: 'Lobster';
+    color: rgb(146, 127, 255);
+  }
+
+  #description hr {
+    width: 100px;
+    border: none;
+    border-bottom: 2px solid rgba(119, 119, 119, 0.25)
+  }
+  
+  .colonne {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+  }
+
+  #description:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #conteneurListe h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 75px;
+    font-family: 'Lobster';
+    color: #d04764;
+  }
+
+  .produit {
+    float: left;
+    width: 31.6%;
+    height: 600px;
+    border: solid 5px;
+    border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 1em;
+    margin-top: 50px;
+    text-align: center;
+    background-color: white;
+  }
+
+  .imageProduit{
+    width: 100%;
+    height: 70%;
+    border-bottom: solid 5px;
+    border-bottom-color: black;
+  }
+
+  .descriptionProduit{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  .ranger:after {
+    display: table;
+    clear: both;
+  }
+
+  #conteneurListe{
+      width:100%;
+  }
+
+
+  

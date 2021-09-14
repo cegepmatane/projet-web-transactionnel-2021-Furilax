@@ -22,4 +22,6 @@ $listeProduits = ProduitDAO::listerProduit();
     }
 ?>
 
+</body>
+
 <?php include "footer.php"?>

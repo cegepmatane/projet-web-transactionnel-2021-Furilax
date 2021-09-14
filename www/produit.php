@@ -12,8 +12,6 @@ $produit = ProduitDAO::lireProduitParId($id);
 
 
 
-<body>
-
 <?php include "header.php"?>
 <section id="conteneurGlobale">
                     <div id="conteneurProduit">

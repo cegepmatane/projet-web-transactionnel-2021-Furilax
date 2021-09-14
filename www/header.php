@@ -1,14 +1,14 @@
-<html>
-<header>
+<body>
+	<header>
 		<div class="parallax">
 			<center><b>Pick Your Logo</b></center>
 		</div>
 		
 			
 		<ul id="nav">
-			<li><a class="active" href="index.html">Accueil</a></li>
-			<li><a href="#mission">Notre Mission</a></li>
-			<li><a href="#produits">Nos Produits</a></li>
+			<li><a href="index.php">Accueil</a></li>
+			<li><a href="mission.php">Notre Mission</a></li>
+			<li><a href="produits.php">Nos Produits</a></li>
 			<li><a href="#connexion">Connexion</a></li>
 		</ul>
 
@@ -19,4 +19,4 @@
                 echo $_SESSION["pseudonyme"];
             }
         ?>
-</header>
+	</header>
