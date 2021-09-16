@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/index.css">
 <body>
 	<header lang="fr">
 		<div class="parallax">
