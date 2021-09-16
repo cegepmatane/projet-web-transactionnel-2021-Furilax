@@ -35,7 +35,7 @@ CREATE TABLE `logos` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `prix` double(10,2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `logos`
