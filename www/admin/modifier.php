@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<link rel="stylesheet" href="produits.css">
+<link rel="stylesheet" href="../footer/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../www/index.css">
+<link rel="stylesheet" href="ajouter&modifier.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>PickYourLogo - Ajouter ou Modifier</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="parallax"></div>
+
+
+        <ul id="nav">
+            <li><a class="active" href="#accueil">Accueil</a></li>
+            <li><a href="#mission">Notre Mission</a></li>
+            <li><a href="#produits">Nos Produits</a></li>
+            <li><a href="#connexion">Connexion</a></li>
+        </ul>
+
+        <script src="script/menu-sticky.js"></script>
+
+    </header>
+    <h1>Modifier</h1>
+    <nav></nav>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    <form class="formulaire" action="">
+        <div class="form">
+            <label for="nom" value>Nom du logo</label><br>
+            <input type="text" id="nom" name="nom"><br>
+        </div>
+        <div class="form">
+            <label for="auteur">Nom de l'auteur</label><br>
+            <input type="text" id="auteur" name="auteur"><br>
+        </div>
+        <div class="form">
+            <label for="description">Description du produit</label><br>
+            <textarea name="description" id="description" cols="60" rows="5"></textarea><br>
+        </div>
+        <div class="form">
+            <label for="image">Image</label><br>
+            <input type="file" id="image" name="image"><br>
+        </div>
+        <div class="form">
+            <label for="prix">Prix</label><br>
+            <input type="text" id="prix" name="prix"><br>
+        </div>
+        <div class="div-boutton-envoyer">
+        <input class="boutton-envoyer" type="submit" value="Submit">
+    </div>
+    </form>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+</body>
+<footer>
+
+    <div class="footer-basic">
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-snapchat"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+        </ul>
+        <p class="copyright">Pick your Logo © 2021</p>
+    </div>
+
+</footer>
+
+</html>

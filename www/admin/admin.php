@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<link rel="stylesheet" href="produits.css">
+<link rel="stylesheet" href="../footer/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../www/index.css">
+<link rel="stylesheet" href="admin.css">
+
+<head>
+	<meta charset="utf-8">
+	<title>PickYourLogo - Accueil</title>
+</head>
+
+<body>
+
+	<header>
+		<div class="parallax"></div>
+
+
+		<ul id="nav">
+			<li><a class="active" href="#accueil">Accueil</a></li>
+			<li><a href="#mission">Notre Mission</a></li>
+			<li><a href="#produits">Nos Produits</a></li>
+			<li><a href="#connexion">Connexion</a></li>
+		</ul>
+
+		<script src="script/menu-sticky.js"></script>
+
+	</header>
+	<h1>Produits</h1>
+	<div class="centrer">
+		<a href="ajouter.php"><button type="button" class="btn ajouter">Ajouter</button></a>
+	</div>
+	<nav></nav>
+
+	<section id="conteneurListe">
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/logo1.png" alt="Synergy STRATA MANAGEMENT">
+			<h2>Logo 1</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/parallax.jpg" alt="Logos Vintage">
+			<h2>Logo 2</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/parallax.jpg" alt="Logos Vintage">
+			<h2>Logo 3</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/parallax.jpg" alt="Logos Vintage">
+			<h2>Logo 4</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/parallax.jpg" alt="Logos Vintage">
+			<h2>Logo 5</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+		<div class="produit">
+			<img class="imageProduit" src="../../../../www/illustration/parallax.jpg" alt="Logos Vintage">
+			<h2>Logo 6</h2>
+			<a href="modifier.php"><button type="button" class="btn modifier">Modifier</button></a>
+			<button type="button" class="btn supprimer">Supprimer</button>
+		</div>
+	</section>
+</body>
+<footer>
+
+	<div class="footer-basic">
+		<div class="social">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-snapchat"></a>
+		</div>
+		<ul>
+			<li><a href="index.html">Acceuil</a></li>
+			<li><a href="mission.html">Mission</a></li>
+			<li><a href="produits.html">Produits</a></li>
+			<li><a href="connexion.html">Connexion</a></li>
+		</ul>
+		<p class="copyright">Pick your Logo © 2021</p>
+	</div>
+
+</footer>
+
+</html>

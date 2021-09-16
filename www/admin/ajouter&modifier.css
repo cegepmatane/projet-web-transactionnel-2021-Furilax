@@ -1,0 +1,32 @@
+.formulaire{
+    border: solid;
+    border-radius: 5px;
+    margin: auto;
+    width: 600px;
+    height: auto;
+}
+
+.form{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.div-boutton-envoyer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.boutton-envoyer{
+    font-size: 20px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 28px;
+}
+.boutton-envoyer:hover{
+    background-color:#7ab97d;
+}
