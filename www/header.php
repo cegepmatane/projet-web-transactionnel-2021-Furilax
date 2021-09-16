@@ -4,7 +4,7 @@
 			<center><b>Pick Your Logo</b></center>
 		</div>
 		
-			
+		
 		<ul id="nav">
 			<li><a href="index.php">Accueil</a></li>
 			<li><a href="mission.php">Notre Mission</a></li>

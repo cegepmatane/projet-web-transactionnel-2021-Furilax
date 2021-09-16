@@ -15,8 +15,6 @@ $logo = LogoDAO::detaillerLogo($id);
 <head>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="style/logo.css">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/footer.css">
 </head>
 
 <?php include "header.php"?>

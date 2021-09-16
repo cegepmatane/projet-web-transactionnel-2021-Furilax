@@ -8,8 +8,6 @@ $listeLogos = LogoDAO::listerLogos();
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style/logos.css">
-<link rel="stylesheet" href="style/index.css">
-<link rel="stylesheet" href="style/footer.css">
 </head>
 
 <?php include "header.php"?>
