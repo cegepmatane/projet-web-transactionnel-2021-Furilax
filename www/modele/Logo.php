@@ -16,6 +16,7 @@ class Logo
 	protected $nom;
 	protected $auteur;
 	protected $description;
+	protected $publication;
 	protected $prix;
 	protected $image;
 	
