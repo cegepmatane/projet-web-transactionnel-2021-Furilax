@@ -1,5 +1,5 @@
 <body>
-	<header>
+	<header lang="fr">
 		<div class="parallax">
 			<center><b>Pick Your Logo</b></center>
 		</div>
@@ -14,9 +14,5 @@
 
 		<script src="/www/script/menu-sticky.js"></script>
 		  
-        <?php
-            if($_SESSION["authentifie"]){
-                echo $_SESSION["pseudonyme"];
-            }
-        ?>
+        
 	</header>

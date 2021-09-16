@@ -1,28 +1,35 @@
 <?php
 
-require CHEMIN_ACCESSEUR . "LogoDAO.php";
-
 //$id = $_GET["id"];
 $id = filter_var($_GET['logo'],FILTER_VALIDATE_INT); 
+
+include "accesseur/LogoDAO.php";
 //echo "id:" . $id;
-$logo = LogoDAO::lireLogoParId($id);
+$logo = LogoDAO::detaillerLogo($id);
 
 //print_r($produit);
 ?>
 
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="style/logo.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
 
-<link rel="stylesheet" href="logo.css">
 <?php include "header.php"?>
 <section id="conteneurGlobale">
                     <div id="conteneurLogo">
-                    <img class="imageLogo" src="illustration/<?=$logo["image"];?>" alt="Synergy STRATA MANAGEMENT">
+                    <img class="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="Synergy STRATA MANAGEMENT">
                     </div>
                     <div id="conteneurInfos">
-                        <h1><?=$logo["nom"];?></h1>
+                        <h1><?=formater($logo->nom)?></h1>
                         <p class="infosLogo"><?=formater($logo->description)?></p>
                         <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
                         <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
-                        <p class="infosLogo">Quantité : Ceci est un produit unique</p>
+                        <p class="infosLogo">Publication : <?=formater($logo->publication)?></p>
                         <Button id="btnPanier">Ajouter au panier</Button>
                     </div>
             </section>
