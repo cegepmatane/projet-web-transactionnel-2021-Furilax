@@ -1,4 +1,5 @@
-<?php 
-session_start();
-define("CHEMIN_ACCESSEUR",$CHEMIN_ACCESSEUR = $_SERVER["DOCUMENT_ROOT"]. "/accesseur/");
+
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>

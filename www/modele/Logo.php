@@ -8,13 +8,15 @@ class Logo
 			'nom' => FILTER_SANITIZE_ENCODED,
 			'auteur' => FILTER_SANITIZE_ENCODED,
 			'description' => FILTER_SANITIZE_ENCODED,
-			'prix' => FILTER_SANITIZE_ENCODED,
+			'publication' => FILTER_SANITIZE_ENCODED,
+			'prix' => FILTER_VALIDATE_FLOAT,
 			'image' => FILTER_SANITIZE_ENCODED
 		);
 		
 	protected $nom;
 	protected $auteur;
 	protected $description;
+	protected $publication;
 	protected $prix;
 	protected $image;
 	
@@ -24,7 +26,9 @@ class Logo
 
 		$this->id = $tableau['id'];
 		$this->nom = $tableau['nom'];
+		$this->auteur = $tableau['auteur'];
 		$this->description = $tableau['description'];
+		$this->publication = $tableau['publication'];
 		$this->prix = $tableau['prix'];
 		$this->image = $tableau['image'];
 	}
@@ -39,8 +43,14 @@ class Logo
 			case 'nom':
 				$this->nom = $valeur;
 			break;
+			case 'auteur':
+				$this->auteur = $valeur;
+			break;
 			case 'description':
 				$this->description = $valeur;
+			break;
+			case 'publication':
+				$this->publication = $valeur;
 			break;
 			case 'prix':
 				$this->prix = $valeur;

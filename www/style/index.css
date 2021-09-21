@@ -41,7 +41,7 @@ html {
 }
 
 .parallax {
-    background-image: url("/www/illustration/parallax.jpg");
+    background-image: url("../illustration/parallax.jpg");
     min-height: 500px; 
     filter: blur(2px);
     position: relative;
