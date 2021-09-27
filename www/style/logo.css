@@ -1,6 +1,6 @@
 #imageLogo{
     width: 100%;
-    height: 90%;
+    height: 100%; 
   }
 
   #descriptionLogo{
@@ -15,7 +15,8 @@
   }
 
   #conteneurLogo{
-      width: 60%;
+      width:550px;
+      height: 500px;
       margin: auto;
       margin-bottom: 10%;
       margin-top: 10%;

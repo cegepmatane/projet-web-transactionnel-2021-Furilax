@@ -20,7 +20,7 @@ $logo = LogoDAO::detaillerLogo($id);
 <?php include "header.php"?>
 <section id="conteneurGlobale">
                     <div id="conteneurLogo">
-                    <img class="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="Synergy STRATA MANAGEMENT">
+                    <img id="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="Synergy STRATA MANAGEMENT">
                     </div>
                     <div id="conteneurInfos">
                         <h1><?=formater($logo->nom)?></h1>
