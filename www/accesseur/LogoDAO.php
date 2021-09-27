@@ -30,6 +30,18 @@ class LogoDAO extends Accesseur implements LogoSQL{
         foreach($logosTableau as $logoTableau) $logos[] = new Logo($logoTableau);
         return $logos;
     }
+
+    public static function nouveautesLogos()
+    {
+        LogoDAO::initialiser();
+
+        $demandeLogos = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_NOUVEAUTES_LOGOS);
+        $demandeLogos->execute();
+        //$contrats = $demandeContrats->fetchAll(PDO::FETCH_OBJ);
+        $logosTableau = $demandeLogos->fetchAll(PDO::FETCH_ASSOC);
+        foreach($logosTableau as $logoTableau) $logos[] = new Logo($logoTableau);
+        return $logos;
+    }
     
     public static function detaillerLogo($id)
     {

@@ -10,6 +10,7 @@ $listeLogos = LogoDAO::listerLogos();
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
 	<link rel="stylesheet" href="/www/style/index.css">
+	<link rel="stylesheet" href="style/logos.css">
 </head>
 
 <?php include "header.php"?>
@@ -42,17 +43,19 @@ $listeLogos = LogoDAO::listerLogos();
 			<h1 class="font-effect-neon">Les nouveautés de la semaine !</h1>
 
 <?php
-        	foreach($listeProduits as $produit){       
+        foreach($listeLogos as $logo){       
 ?>
 
-			<div class="produit">
-				<a href="produit.php"><img class="imageProduit" src="illustration/<?=$produit["image"];?>" alt="" ></a>
-				<h2><?=$produit["nom"]; ?></h2>
-				<p class = "descriptionProduit"><?=$produit["description"];?></p>
+			<div class="logo">
+				<a href="logo.php?logo=<?=$logo->id?>">
+					<img class="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="">
+				</a>
+				<h2><?=formater($logo->nom)?></h2>
+				<p class = "descriptionLogo"><?=formater($logo->description)?></p>
 			</div>
 
 <?php
-    		}
+    	}
 ?>
 
 		</section>
