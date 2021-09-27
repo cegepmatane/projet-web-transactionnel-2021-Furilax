@@ -13,8 +13,18 @@ div .image{
     margin-bottom: 25px;
 }
 
+.mission h1{
+    text-align: center;
+    color: #d04764; 
+    font-family: 'Lobster'; 
+    font-size: 36px; 
+    font-weight: normal; 
+    line-height: 48px; 
+  }
+
+
 .information{
-    width: 1500px;
+    width: 800px;
     height: 400px;
     display: flex;
     align-items: flex-start;
@@ -22,16 +32,17 @@ div .image{
     margin-bottom: 40px;
     border-style: inset;
     border-width: 7px;
-    border-color: coral;
+    border-color: #d04764;
     border-radius: 4px;
 }
 
 .mission{
-    margin:100px;
+    margin:50px;
 }
 
 .text{
     font-size:larger;
+    padding-top: 50px;
     padding-right: 50px;
     text-align: left;
 }
