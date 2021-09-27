@@ -1,7 +1,6 @@
 <?php
-require "configuration.php";
-require CHEMIN_ACCESSEUR . "LogoDAO.php";
-$listeProduits = LogoDAO::listerProduit();
+include "accesseur/LogoDAO.php";
+$listeLogos = LogoDAO::listerLogos();
 //print_r($listeProduits);
 ?>
 
