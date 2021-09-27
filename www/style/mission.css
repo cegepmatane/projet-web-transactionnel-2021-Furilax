@@ -1,0 +1,37 @@
+
+.image{
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+}
+
+div .image{
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.information{
+    width: 1500px;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    margin:auto;
+    margin-bottom: 40px;
+    border-style: inset;
+    border-width: 7px;
+    border-color: coral;
+    border-radius: 4px;
+}
+
+.mission{
+    margin:100px;
+}
+
+.text{
+    font-size:larger;
+    padding-right: 50px;
+    text-align: left;
+}
