@@ -24,7 +24,7 @@ $logo = LogoDAO::detaillerLogo($id);
                     </div>
                     <div id="conteneurInfos">
                         <h1><?=formater($logo->nom)?></h1>
-                        <p class="infosLogo"><?=formater($logo->description)?></p>
+                        <div><p class="infosLogo"><?=formater($logo->description)?></p></div>
                         <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
                         <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
                         <p class="infosLogo">Publication : <?=formater($logo->publication)?></p>
