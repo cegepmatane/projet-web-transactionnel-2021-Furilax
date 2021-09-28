@@ -4,18 +4,14 @@ require_once "configuration.php";
 
 require_once "../accesseur/LogoDAO.php";
 
-$nom = $_POST['nom'];
-$auteur = $_POST['auteur'];
-$description = $_POST['description'];
-$prix = $_POST["prix"];
-
-
 $filtresLogo = [];
 
-$filtresLogo['nom'] = FILTER_VALIDATE_INT;
+$filtresLogo['nom'] = FILTER_SANITIZE_ENCODED;
 $filtresLogo['auteur'] = FILTER_SANITIZE_ENCODED;
 $filtresLogo['description'] = FILTER_SANITIZE_ENCODED;
 $filtresLogo['prix'] = FILTER_SANITIZE_ENCODED;
+$filtresLogo['id'] = FILTER_VALIDATE_INT;
+
 
 $logo = filter_input_array(INPUT_POST, $filtresLogo);
 $reussiteAjout = LogoDAO::modifierLogo($logo);

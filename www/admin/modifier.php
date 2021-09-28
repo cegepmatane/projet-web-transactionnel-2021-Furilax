@@ -23,17 +23,7 @@ $logo = LogoDAO::lireLogo($id);
 
 <body>
     <header>
-        <div class="parallax"></div>
-
-        <ul id="nav">
-            <li><a class="active" href="#accueil">Accueil</a></li>
-            <li><a href="#mission">Notre Mission</a></li>
-            <li><a href="#produits">Nos Produits</a></li>
-            <li><a href="#connexion">Connexion</a></li>
-        </ul>
-
-        <script src="script/menu-sticky.js"></script>
-
+        <?php include "../header.php"?>;
     </header>
     <h1>Modifier</h1>
     <nav></nav>

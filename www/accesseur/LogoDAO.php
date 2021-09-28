@@ -85,19 +85,26 @@ class LogoDAO extends Accesseur implements LogoSQL{
 
     public static function modifierLogo($logo)
     {
-
         LogoDAO::initialiser();
 
-        $requeteLogo = BaseDeDonnees::getConnexion()->prepare($MESSAGE_SQL_LISTE_LOGO);
+        $requeteLogo = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_MODIFIER_LOGO);
 
-        $requeteLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_INT);
+        $requeteLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_STR);
         $requeteLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
         $requeteLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
         $requeteLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
-
-        return $requeteLogo -> execute();
+        $requeteLogo->bindParam(':id', $logo['id'], PDO::PARAM_INT);
+        $requeteLogo -> execute();
+        return $requeteLogo;
     }
-    
+    public static function supprimerLogo($id)
+    {
+        LogoDAO::initialiser();
+        $supprimeLogo = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_SUPPRIMER_LOGO);
+        $supprimeLogo->bindParam(':id', $id, PDO::PARAM_INT);
+        $supprimeLogo->execute();
+        return $supprimeLogo;
+    }
 }
 
 function formater($texte)
