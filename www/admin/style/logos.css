@@ -1,4 +1,4 @@
-.produit {
+.logo {
     float: left;
     width: 31.6%;
     height: 600px;
@@ -10,14 +10,14 @@
     background-color: white;
   }
 
-  .imageProduit{
+  .imageLogo{
     width: 100%;
     height: 70%;
     border-bottom: solid 5px;
     border-bottom-color: black;
   }
 
-  .descriptionProduit{
+  .descriptionLogo{
     color: black;
     font-weight: bold;
     font-size: medium;

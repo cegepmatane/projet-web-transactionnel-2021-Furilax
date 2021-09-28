@@ -54,6 +54,49 @@ class LogoDAO extends Accesseur implements LogoSQL{
         return new Logo($logo);
     }
 
+    public static function ajouterLogo($logo)
+    {
+
+        LogoDAO::initialiser();
+
+        $requeteAjouterLogo = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_AJOUTER_LOGO); 
+    
+        $requeteAjouterLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_STR);
+        $requeteAjouterLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
+        $requeteAjouterLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
+        $requeteAjouterLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
+        //$requeteAjouterLogo->bindParam(':image', $logo['image'], PDO::PARAM_STR);
+    
+        $reussiteAjout = $requeteAjouterLogo -> execute();
+        return $reussiteAjout;
+    }
+
+    public static function lireLogo($id)
+    {
+        LogoDAO::initialiser();
+        
+        $id= filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
+
+        $requeteLireLogo = LogoDAO::$basededonnees->prepare(LogoDAO::$SQL_LIRE_LOGO);
+        $requeteLireLogo-> bindParam(':id',$id,PDO::PARAM_INT);
+        $requeteLireLogo->execute();
+        return $requeteLireLogo -> fetch();
+    }
+
+    public static function modifierLogo($logo)
+    {
+
+        LogoDAO::initialiser();
+
+        $requeteLogo = BaseDeDonnees::getConnexion()->prepare($MESSAGE_SQL_LISTE_LOGO);
+
+        $requeteLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_INT);
+        $requeteLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
+        $requeteLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
+        $requeteLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
+
+        return $requeteLogo -> execute();
+    }
     
 }
 

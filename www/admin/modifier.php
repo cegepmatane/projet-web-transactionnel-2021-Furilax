@@ -1,10 +1,20 @@
+<?php
+
+require_once "configuration.php";
+require_once "../accesseur/LogoDAO.php";
+$id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
+
+$logo = LogoDAO::lireLogo($id);
+
+?>
+
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="produits.css">
-<link rel="stylesheet" href="../footer/footer.css">
+<link rel="stylesheet" href="style/produits.css">
+<link rel="stylesheet" href="style//footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../../../../www/index.css">
-<link rel="stylesheet" href="ajouter&modifier.css">
+<link rel="stylesheet" href="style/ajouter&modifier.css">
 
 <head>
     <meta charset="utf-8">
@@ -12,10 +22,8 @@
 </head>
 
 <body>
-
     <header>
         <div class="parallax"></div>
-
 
         <ul id="nav">
             <li><a class="active" href="#accueil">Accueil</a></li>
@@ -30,26 +38,33 @@
     <h1>Modifier</h1>
     <nav></nav>
     <!------------------------------------------------------------------------------------------------------------------------------>
-    <form class="formulaire" action="">
+    <form class="formulaire" 
+        action="traitement-modifier.php"
+        method="POST">
         <div class="form">
             <label for="nom" value>Nom du logo</label><br>
-            <input type="text" id="nom" name="nom"><br>
+            <input type="text" id="nom" name="nom"
+                value="<?= $logo["nom"]?>"><br>
         </div>
         <div class="form">
             <label for="auteur">Nom de l'auteur</label><br>
-            <input type="text" id="auteur" name="auteur"><br>
+            <input type="text" id="auteur" name="auteur"
+            value="<?= $logo["nom"]?>"><br>
         </div>
         <div class="form">
             <label for="description">Description du produit</label><br>
-            <textarea name="description" id="description" cols="60" rows="5"></textarea><br>
+            <textarea name="description" id="description" 
+            value="<?= $logo["nom"]?>" cols="60" rows="5"></textarea><br>
         </div>
         <div class="form">
             <label for="image">Image</label><br>
-            <input type="file" id="image" name="image"><br>
+            <input type="file" id="image" name="image"
+            value="<?= $logo["nom"]?>"><br>
         </div>
         <div class="form">
             <label for="prix">Prix</label><br>
-            <input type="text" id="prix" name="prix"><br>
+            <input type="text" id="prix" name="prix"
+            value="<?= $logo["nom"]?>"><br>
         </div>
         <div class="div-boutton-envoyer">
         <input class="boutton-envoyer" type="submit" value="Submit">
@@ -58,24 +73,5 @@
     <!------------------------------------------------------------------------------------------------------------------------------>
 
 </body>
-<footer>
-
-    <div class="footer-basic">
-        <div class="social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-snapchat"></a>
-        </div>
-        <ul>
-            <li><a href="index.html">Acceuil</a></li>
-            <li><a href="mission.html">Mission</a></li>
-            <li><a href="produits.html">Produits</a></li>
-            <li><a href="connexion.html">Connexion</a></li>
-        </ul>
-        <p class="copyright">Pick your Logo © 2021</p>
-    </div>
-
-</footer>
-
+<?php include "footer.php"; ?>
 </html>

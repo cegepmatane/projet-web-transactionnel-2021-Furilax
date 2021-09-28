@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="produits.css">
-<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="style/produits.css">
+<link rel="stylesheet" href="style/footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../../../../www/index.css">
-<link rel="stylesheet" href="ajouter&modifier.css">
+<link rel="stylesheet" href="style/ajouter&modifier.css">
 
 <head>
     <meta charset="utf-8">
@@ -30,26 +30,28 @@
     <h1>Ajouter</h1>
     <nav></nav>
     <!------------------------------------------------------------------------------------------------------------------------------>
-    <form class="formulaire" action="">
+    <form class="formulaire"
+     action="traitement-ajouter.php"
+     method="POST">
         <div class="form">
             <label for="nom" value>Nom du logo</label><br>
-            <input type="text" id="nom" name="nom"><br>
+            <input type="text" id="nom" name="nom"require><br>
         </div>
         <div class="form">
             <label for="auteur">Nom de l'auteur</label><br>
-            <input type="text" id="auteur" name="auteur"><br>
+            <input type="text" id="auteur" name="auteur" require><br>
         </div>
         <div class="form">
             <label for="description">Description du produit</label><br>
-            <textarea name="description" id="description" cols="60" rows="5"></textarea><br>
+            <textarea name="description" id="description" cols="60" rows="5"require></textarea><br>
         </div>
         <div class="form">
             <label for="image">Image</label><br>
-            <input type="file" id="image" name="image"><br>
+            <input type="file" id="image" name="image"require><br>
         </div>
         <div class="form">
             <label for="prix">Prix</label><br>
-            <input type="text" id="prix" name="prix"><br>
+            <input type="text" id="prix" name="prix"require><br>
         </div>
         <div class="div-boutton-envoyer">
         <input class="boutton-envoyer" type="submit" value="Submit">
