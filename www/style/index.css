@@ -155,5 +155,8 @@ html {
       width:100%;
   }
 
+  .logo {
+    word-wrap: break-word;
+  }
 
   

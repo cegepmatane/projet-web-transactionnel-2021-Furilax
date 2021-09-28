@@ -9,7 +9,7 @@ $listeLogos = LogoDAO::listerLogos();
 <head>
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
-	<link rel="stylesheet" href="/www/style/index.css">
+	<link rel="stylesheet" href="style/index.css">
 	<link rel="stylesheet" href="style/logos.css">
 </head>
 
