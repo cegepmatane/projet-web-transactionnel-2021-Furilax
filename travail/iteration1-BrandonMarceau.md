@@ -24,4 +24,7 @@ https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/13
 Trouver les images réel pour la publication #17 : 45 minutes 
 https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/17
 
-Total : 21 h 40 m
+Écrire les informations réel dans la base de donnée #18 : 1 heure 
+https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/18
+
+Total : 22 h 40 m
