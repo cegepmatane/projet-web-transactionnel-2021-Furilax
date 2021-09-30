@@ -16,19 +16,8 @@ $listeLogos = LogoDAO::listerLogos();
 </head>
 
 <body>
-
 	<header>
-		<div class="parallax"></div>
-
-
-		<ul id="nav">
-			<li><a class="active" href="#accueil">Accueil</a></li>
-			<li><a href="#mission">Notre Mission</a></li>
-			<li><a href="#produits">Nos Produits</a></li>
-			<li><a href="#connexion">Connexion</a></li>
-		</ul>
-
-		<script src="script/menu-sticky.js"></script>
+		<?php include "../header.php"?>;
 
 	</header>
 	<h1>Produits</h1>
@@ -38,8 +27,8 @@ $listeLogos = LogoDAO::listerLogos();
 	<nav></nav>
 
 	<section id="conteneurListe">
-			
-	<?php
+
+		<?php
         foreach($listeLogos as $logo){       
 	?>
 		<div class="logo">
@@ -47,14 +36,16 @@ $listeLogos = LogoDAO::listerLogos();
 				<img class="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="">
 			</a>
 			<h2><?=formater($logo->nom)?></h2>
-			<p class = "descriptionLogo"><?=formater($logo->description)?></p>
+			<p class="descriptionLogo"><?=formater($logo->description)?></p>
 			<a href="modifier.php?id=<?=($logo->id)?>"><button type="button" class="btn modifier">Modifier</button></a>
-			<a href="traitement-supprimer.php?id=<?=($logo->id)?>"><button type="button" class="btn supprimer">Supprimer</button></a>
+			<a href="traitement-supprimer.php?id=<?=($logo->id)?>"><button type="button"
+					class="btn supprimer">Supprimer</button></a>
 		</div>
 	</section>
-<?php
+	<?php
     }
 ?>
 </body>
 <?php include "footer.php"; ?>
+
 </html>
