@@ -1,6 +1,7 @@
 <?php
+require_once "../chemins.php";
 require_once "configuration.php";
-require_once "accesseur/LogoDAO.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
 $id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
 
 $logo = LogoDAO::lireLogo($id);
