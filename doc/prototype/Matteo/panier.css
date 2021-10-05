@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster&effect=neon);
+
+body {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#nav{
+    background-color: #333;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    text-align:center;
+    z-index: 1;
+}
+#nav li{
+    display:inline;
+}
+#nav a{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding:20px;
+}
+
+#nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #aa0404;
+}
+
+.parallax {
+    background-image: url("/www/illustration/parallax.jpg");
+    min-height: 500px; 
+    filter: blur(2px);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax center {
+  filter: none !important;
+  text-align: center;
+  font-size: 150px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.conteneurPanier h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 75px;
+    font-family: 'Lobster';
+    color: #d04764;
+}
+
+.conteneurPanier{
+    width: 100%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+}
+
+
