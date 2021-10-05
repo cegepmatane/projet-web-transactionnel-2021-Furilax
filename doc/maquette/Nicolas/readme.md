@@ -14,3 +14,10 @@
 
 ![image](https://user-images.githubusercontent.com/54377194/131922109-12a4924a-da6b-48f2-b2bf-b949ab29eebd.png)
 
+# maquette historique d'achat
+
+![image](https://user-images.githubusercontent.com/54377194/135533728-b632a91f-0008-4cec-bcdf-c20eb61276ed.png)
+
+# maquette edit profil
+
+![image](https://user-images.githubusercontent.com/54377194/135533758-e0eb3e04-23ca-43be-bea8-d04bab42111f.png)

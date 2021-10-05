@@ -1,25 +1,22 @@
 <?php
-include "accesseur/LogoDAO.php";
+require_once "../chemins.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
 $listeLogos = LogoDAO::listerLogos();
 ?>
 
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="produits.css">
-<link rel="stylesheet" href="../footer/footer.css">
-<link rel="stylesheet" href="admin.css">
-<link rel="stylesheet" href="logos.css">
+<link rel="stylesheet" href="style/footer.css">
+<link rel="stylesheet" href="style/admin.css">
+<link rel="stylesheet" href="style/logos.css?=21">
 
 <head>
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
 </head>
 
-<body>
-	<header>
-		<?php include "../header.php"?>;
+<?php include "../header.php"?>
 
-	</header>
 	<h1>Produits</h1>
 	<div class="centrer">
 		<a href="ajouter.php"><button type="button" class="btn ajouter">Ajouter</button></a>
@@ -46,6 +43,6 @@ $listeLogos = LogoDAO::listerLogos();
     }
 ?>
 </body>
-<?php include "footer.php"; ?>
+<?php include "footer.php"?>
 
 </html>

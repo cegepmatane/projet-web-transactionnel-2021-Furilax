@@ -1,9 +1,8 @@
 <?php 
 
+require_once "../chemins.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
 require_once "configuration.php";
-
-require_once "accesseur/LogoDAO.php";
-
 
 $filtresLogo = [];
 
