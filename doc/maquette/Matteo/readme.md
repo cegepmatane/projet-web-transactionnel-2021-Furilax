@@ -4,4 +4,4 @@
 
 # Maquette de la page du panier
 
-![Maquette_Panier](doc\maquette\Matteo\Maquette_Panier.png)
+![Maquette_Panier](Maquette_Panier.png)
