@@ -3,7 +3,8 @@
 //$id = $_GET["id"];
 $id = filter_var($_GET['logo'],FILTER_VALIDATE_INT); 
 
-include "accesseur/LogoDAO.php";
+require_once "chemins.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
 //echo "id:" . $id;
 $logo = LogoDAO::detaillerLogo($id);
 
@@ -14,7 +15,7 @@ $logo = LogoDAO::detaillerLogo($id);
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-    <link rel="stylesheet" href="style/logo.css">
+    <link rel="stylesheet" href="style/logo.css?=20">
 </head>
 
 <?php include "header.php"?>

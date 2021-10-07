@@ -1,6 +1,7 @@
 <?php
-include "accesseur/LogoDAO.php";
-$listeLogos = LogoDAO::listerLogos();
+require_once "chemins.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
+$listeLogos = LogoDAO::nouveautesLogos();
 //print_r($listeProduits);
 ?>
 
@@ -9,7 +10,7 @@ $listeLogos = LogoDAO::listerLogos();
 <head>
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
-	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" href="style/index.css?=26">
 	<link rel="stylesheet" href="style/logos.css">
 </head>
 

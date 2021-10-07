@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="style/index.css">
 <body>
 	<header lang="fr">
+		<meta charset="utf-8">
 		<div class="parallax">
 			<center><b>Pick Your Logo</b></center>
 		</div>
@@ -9,7 +10,7 @@
 		<ul id="nav">
 			<li><a href="index.php">Accueil</a></li>
 			<li><a href="mission.php">Notre Mission</a></li>
-			<li><a href="produits.php">Nos Produits</a></li>
+			<li><a href="logos.php">Nos Produits</a></li>
 			<li><a href="#connexion">Connexion</a></li>
 		</ul>
 

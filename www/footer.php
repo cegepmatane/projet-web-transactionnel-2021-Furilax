@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="style/footer.css">
 <footer>
     <div class="footer-basic"> 
     <div class = "social">

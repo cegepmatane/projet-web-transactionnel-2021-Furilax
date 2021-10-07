@@ -1,5 +1,6 @@
 <?php
-include "accesseur/LogoDAO.php";
+require_once "chemins.php";
+require CHEMIN_ACCESSEUR . "LogoDAO.php";
 $listeLogos = LogoDAO::listerLogos();
 //print_r($listeProduits);
 ?>
@@ -7,7 +8,7 @@ $listeLogos = LogoDAO::listerLogos();
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style/logos.css">
+	<link rel="stylesheet" href="style/logos.css?=21">
 </head>
 
 <?php include "header.php"?>
