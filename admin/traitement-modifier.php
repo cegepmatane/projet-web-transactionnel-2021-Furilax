@@ -13,7 +13,7 @@ $filtresLogo['prix'] = FILTER_SANITIZE_ENCODED;
 $filtresLogo['id'] = FILTER_SANITIZE_ENCODED;
 
 $logo = filter_input_array(INPUT_POST, $filtresLogo);
-print_r($logo);
+//print_r($logo);
 $reussiteAjout = LogoDAO::modifierLogo($logo);
 
 if ($reussiteAjout){
