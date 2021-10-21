@@ -1,0 +1,27 @@
+.formulaire{
+    border: solid;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+    height: auto;
+}
+.form{
+    margin-left: 30%;
+    margin-top: 5px;
+}
+
+.boutton-envoyer{
+    font-size: 10px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 28px;
+}
+.boutton-envoyer:hover{
+    background-color:#7ab97d;
+}
+.titre{
+    text-align: center;
+}

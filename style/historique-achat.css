@@ -1,0 +1,46 @@
+.block-liste-achat{
+    display: flex;
+    justify-content:center;
+    padding-top: 100px;
+}
+
+.liste-achat{
+    width: 60%;
+    height: auto;
+    border-width: 1px;
+
+}
+
+.achat{
+    border-style: solid; 
+    border-width: 1px;
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content:left;
+}
+
+.image-produit{
+    width: 150px;
+    height: auto;
+
+}
+
+.information-achat{
+    width: 87%;
+    height: auto;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+}
+
+ul li{
+    list-style-type: none;
+    
+}
+
+.liste{
+    font-size: 25px;
+}
