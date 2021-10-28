@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require "MembreDAO.php";
 
 $estConnecter = false;
@@ -18,7 +20,14 @@ if(!$estConnecter && isset($_POST["action-inscription"])){
         echo "Les deux mots de passe ne sont pas semblables";
     }
 
-    MembreDAO::inscrireUnMembre($_POST);
+    $reussite = MembreDAO::inscrireUnMembre($_POST);
+
+    if($reussite){
+        echo "<div class='sucess'>
+             <h3>Vous êtes inscrit avec succès.</h3>
+             <p>Cliquez ici pour vous <a href='compte.php'>connecter</a></p>
+       </div>";
+    }
 }
 
 if(!$estConnecter && isset($_POST["action-connexion"])){
@@ -37,7 +46,7 @@ if(!$estConnecter && isset($_POST["action-connexion"])){
   if(!$estConnecter){ 
         header("Location: compte.php");    
     }else{ 
-        header("Location: ../../index.php");
+        header("Location: ../../edition-profil.php");
     } 
      
 ?>

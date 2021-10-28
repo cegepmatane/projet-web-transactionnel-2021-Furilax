@@ -19,15 +19,16 @@ class Accesseur{
 		}
 }
 
-class MembreDAO extends Accesseur implements LogoSQL{
+class MembreDAO extends Accesseur implements MembreSQL{
 
     public static function validerConnexion($membre){
 
         MembreDAO::initialiser();
 
         $requeteValiderConnexion = MembreDAO::$basededonnees->prepare(MembreDAO::SQL_VALIDER_CONNEXION);
+        $motDePasse = hash('sha256',$membre["motDePasse"]); 
         $requeteValiderConnexion->bindParam(':identifiant', $membre["identifiant"], PDO::PARAM_STR);
-        $requeteValiderConnexion->bindParam(':motDePasse', $membre["motDePasse"], PDO::PARAM_STR);
+        $requeteValiderConnexion->bindParam(':motDePasse', $motDePasse, PDO::PARAM_STR);
         $requeteValiderConnexion->execute();
         $membre = $requeteValiderConnexion->fetch();
 
@@ -39,17 +40,23 @@ class MembreDAO extends Accesseur implements LogoSQL{
 
         MembreDAO::initialiser();
 
-        $motDePasse = mysql_real_escape_string(htmlspecialchars($membre["motDePasse"]));
+        /*$motDePasse = mysql_real_escape_string(htmlspecialchars($membre["motDePasse"]));
         $identifiant = mysql_real_escape_string(htmlspecialchars($membre["identifiant"]));
-        $courriel= mysql_real_escape_string(htmlspecialchars($membre["courriel"]));
-           
-        $motDePasse = sha1($motDePasse);
+        $courriel= mysql_real_escape_string(htmlspecialchars($membre["courriel"]));*/
+        
+        $motDePasse = $membre["motDePasse"];
+        $identifiant = $membre["identifiant"];
+        $courriel = $membre["courriel"];
+        $motDePasse = hash('sha256',$motDePasse);
+        
         
         $requeteValiderConnexion = MembreDAO::$basededonnees->prepare(MembreDAO::SQL_INSCRIRE_MEMBRE);
         $requeteValiderConnexion->bindParam(':identifiant', $identifiant, PDO::PARAM_STR);
         $requeteValiderConnexion->bindParam(':motDePasse', $motDePasse, PDO::PARAM_STR);
         $requeteValiderConnexion->bindParam(':courriel', $courriel, PDO::PARAM_STR);
-        $requeteValiderConnexion->execute();
+
+        $reussiteInscription = $requeteValiderConnexion -> execute();
+        return $reussiteAjout;
     }
 
     public static function lireMembreParIdentifiant($identifiant){
