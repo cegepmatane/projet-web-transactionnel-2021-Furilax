@@ -36,7 +36,10 @@ $listeLogos = LogoDAO::listerLogos();
             <label for="prix">mot de pass</label><br>
             <input type="password" id="prix" name="prix">
             <input class="boutton-envoyer" type="submit" value="Submit">
-        </div>  
+        </div>
+            <div class="form">
+            <a href="deconnexion.php">Deconnexion</a>
+            </div> 
     </div>
     </form>
 
