@@ -62,10 +62,21 @@ class MembreDAO extends Accesseur implements MembreSQL{
         MembreDAO::initialiser();
         
         $requeteLireMembreParIdentifiant = MembreDAO::$basededonnees->prepare(MembreDAO::SQL_LIRE_MEMBRE_PAR_IDENTIFIANT);
-        $requeteLireMembreParIdentifiant->bindParam(':identifiant', $membre["identifiant"], PDO::PARAM_STR);
+        $requeteLireMembreParIdentifiant->bindParam(':identifiant', $identifiant, PDO::PARAM_STR);
         $requeteLireMembreParIdentifiant->execute();
         $membre = $requeteLireMembreParIdentifiant->fetch();
 
+        return $membre;
+    }
+
+    public static function detaillerMembre($id)
+    {
+        MembreDAO::initialiser();
+
+        $demandeMembre = MembreDAO::$basededonnees->prepare(MembreDAO::SQL_DETAIL_MEMBRE);
+        $demandeMembre->bindParam(':id', $id, PDO::PARAM_INT);
+        $demandeMembre->execute();
+        $membre = $demandeMembre->fetch(PDO::FETCH_ASSOC);
         return $membre;
     }
 }

@@ -1,8 +1,11 @@
 <?php
+
+$id = filter_var($_GET['membres'],FILTER_VALIDATE_INT); 
+
 require_once "chemins.php";
-require CHEMIN_ACCESSEUR . "LogoDAO.php";
-$listeLogos = LogoDAO::listerLogos();
-//print_r($listeProduits);
+require CHEMIN_ACCESSEUR . "MembreDAO.php";
+$membre = MembreDAO::detaillerMembre($id);
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -24,17 +27,17 @@ $listeLogos = LogoDAO::listerLogos();
         </div>
         <div class="form">
             <label for="nom" value>nom d'utilisateur</label><br>
-            <input type="text" id="nom" name="nom">
+            <input type="text" id="nom" name="nom" value="<?=formater($membre->nom)?>">
             <input class="boutton-envoyer" type="submit" value="Submit">
         </div>
         <div class="form">
-            <label for="auteur">e-mail</label><br>
-            <input type="email" id="auteur" name="auteur">
+            <label for="mail">e-mail</label><br>
+            <input type="email" id="mail" name="mail">
             <input class="boutton-envoyer" type="submit" value="Submit">
         </div>
         <div class="form">
-            <label for="prix">mot de pass</label><br>
-            <input type="password" id="prix" name="prix">
+            <label for="motDePass">mot de pass</label><br>
+            <input type="password" id="motDePass" name="motDePass">
             <input class="boutton-envoyer" type="submit" value="Submit">
         </div>
             <div class="form">

@@ -39,15 +39,14 @@ if(!$estConnecter && isset($_POST["action-connexion"])){
         $_SESSION["estConnecter"] = true;
         $_SESSION["identifiant"] = $membre["identifiant"];
   }
-  else{
-        $membre = MembreDAO::lireMembreParIdentifiant($_SESSION["identifiant"]);
-    }
 }
 
   if(!$estConnecter){ 
         header("Location: compte.php");    
     }else{ 
-        header("Location: edition-profil.php");
+        $membre = MembreDAO::lireMembreParIdentifiant($_SESSION["identifiant"]);
+        $id = $membre["id"];
+        header("Location: edition-profil.php?membre='.$id.'");
     } 
      
 ?>
