@@ -79,4 +79,18 @@ class MembreDAO extends Accesseur implements MembreSQL{
         $membre = $demandeMembre->fetch(PDO::FETCH_ASSOC);
         return $membre;
     }
+    public static function modifierMembre($membre)
+    {
+        MembreDAO::initialiser();
+
+        $requeteMembre = MembreDAO::$basededonnees->prepare(MembreDAO::SQL_MODIFIER_MEMBRE);
+
+        $requeteMembre->bindParam(':nom', $membre['nom'], PDO::PARAM_STR);
+        $requeteMembre->bindParam(':mail', $membre['mail'], PDO::PARAM_STR);
+        $requeteMembre->bindParam(':motDePass', $membre['motDePass'], PDO::PARAM_STR);
+        $requeteMembre->bindParam(':id', $membre['id'], PDO::PARAM_INT);
+        
+        $reussiteModification = $requeteMembre -> execute();
+        return $reussiteModification;
+    }
 }

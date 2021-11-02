@@ -27,18 +27,18 @@ $membre = MembreDAO::detaillerMembre($id);
         </div>
         <div class="form">
             <label for="nom" value>nom d'utilisateur</label><br>
-            <input type="text" id="nom" name="nom" value="<?=formater($membre->nom)?>">
-            <input class="boutton-envoyer" type="submit" value="Submit">
+            <input type="text" id="nom" name="nom">
+            <input class="boutton-envoyer" type="submit" value="Modifier">
         </div>
         <div class="form">
             <label for="mail">e-mail</label><br>
             <input type="email" id="mail" name="mail">
-            <input class="boutton-envoyer" type="submit" value="Submit">
+            <input class="boutton-envoyer" type="submit" value="Modifier">
         </div>
         <div class="form">
             <label for="motDePass">mot de pass</label><br>
             <input type="password" id="motDePass" name="motDePass">
-            <input class="boutton-envoyer" type="submit" value="Submit">
+            <input class="boutton-envoyer" type="submit" value="Modifier">
         </div>
             <div class="form">
             <a href="deconnexion.php">Deconnexion</a>
