@@ -61,6 +61,7 @@ if(!$estConnecter && isset($_POST["action-connexion"])){
   if($estConnecter){
         $_SESSION["estConnecter"] = true;
         $_SESSION["identifiant"] = $membre->identifiant;
+        $_SESSION["courriel"] = $membre->courriel;
   }
 }
 
