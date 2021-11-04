@@ -9,6 +9,5 @@ interface LogoSQL
 	public const SQL_MODIFIER_LOGO = "UPDATE logo SET nom = :nom, auteur = :auteur, description = :description, prix = :prix where id = :id";
 	public const SQL_LIRE_LOGO = "SELECT nom, auteur, description, prix FROM logo WHERE id = :id";
 	public const SQL_SUPPRIMER_LOGO = "DELETE from logo where id = :id";
-
 }
 ?>
