@@ -13,6 +13,6 @@ https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/21
 - Créer les issue itération 2 + mise a jour de la documentation #28 : 1h
 https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/28
 
-- Faire des suivis de mon progrès a mes coéquipier : 45m
+- Faire des suivis de mon progrès a mes coéquipier et les aiders : 1h
 
-Total : 23h45m
+Total : 24h
