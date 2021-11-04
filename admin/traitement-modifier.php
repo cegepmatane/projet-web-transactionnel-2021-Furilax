@@ -17,9 +17,9 @@ $logo = filter_input_array(INPUT_POST, $filtresLogo);
 $reussiteAjout = LogoDAO::modifierLogo($logo);
 
 if ($reussiteAjout){
-    ?>
-    <a href='admin.php'>ca marche</a>
-    <?php
+    
+    echo "ca marche"
+    
 }
 else{
     echo "ça marche pas".$reussiteAjout;

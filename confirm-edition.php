@@ -5,9 +5,9 @@ require CHEMIN_ACCESSEUR . "MembreDAO.php";
 
 $filtresMembre = [];
 
-$filtresMembre['nom'] = FILTER_SANITIZE_ENCODED;
-$filtresMembre['mail'] = FILTER_SANITIZE_ENCODED;
-$filtresMembre['motDePass'] = FILTER_SANITIZE_ENCODED;
+$filtresMembre['identidiant'] = FILTER_SANITIZE_ENCODED;
+$filtresMembre['courriel'] = FILTER_SANITIZE_ENCODED;
+$filtresMembre['motDePasse'] = FILTER_SANITIZE_ENCODED;
 $filtresMembre['id'] = FILTER_SANITIZE_ENCODED;
 
 $membre = filter_input_array(INPUT_POST, $filtresMembre);
@@ -15,9 +15,7 @@ $membre = filter_input_array(INPUT_POST, $filtresMembre);
 $reussiteAjout = MembreDAO::modifierMembre($membre);
 
 if ($reussiteAjout){
-    ?>
-    <a href='edition-profil.php?membre=<?=$membre->id?>'>ca marche</a>
-    <?php
+    echo "ca marche";
 }
 else{
     echo "ça marche pas".$reussiteAjout;

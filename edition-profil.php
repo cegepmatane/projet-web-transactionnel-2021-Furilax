@@ -30,16 +30,16 @@ $membre = MembreDAO::detaillerMembre($id);
             <input type="text" id="nom" name="nom" value="<?=$_SESSION["identifiant"]?>">
             <input class="boutton-envoyer" type="submit" value="Modifier">
         </div>
-        <!--<div class="form">
-            <label for="mail">e-mail : <?=$membre->courriel?></label><br>
-            <input type="email" id="mail" name="mail" value="<?=$membre->courriel?>">
-            <input class="boutton-envoyer" type="submit" value="Modifier">
-        </div>-->
         <div class="form">
+            <label for="mail">e-mail :</label><br>
+            <input type="text" id="mail" name="mail" value="<?=$_SESSION["courriel"]?>">
+            <input class="boutton-envoyer" type="submit" value="Modifier">
+        </div>
+        <!--<div class="form">
             <label for="motDePass">mot de pass</label><br>
             <input type="password" id="motDePass" name="motDePass">
             <input class="boutton-envoyer" type="submit" value="Modifier">
-        </div>
+        </div>-->
             <div class="form">
             <a href="deconnexion.php">Deconnexion</a>
             </div> 
