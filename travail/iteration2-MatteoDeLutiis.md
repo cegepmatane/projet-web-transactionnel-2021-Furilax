@@ -8,7 +8,7 @@ Temps total : 1 heure
 ## Intégration panneau admin au serveur -- Ratrapage #26
 
 Lien : https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/26
-Temps total : 4 heures
+Temps total : 5 heures
 
 ## Faire le storyboard du processus de paiement en ligne #32
 
@@ -28,6 +28,6 @@ Temps total :
 ## Programmer la page panier #25
 
 Lien : https://github.com/cegepmatane/projet-web-transactionnel-2021-Furilax/issues/25
-Temps total : 7 heures 45 minutes
+Temps total : 8 heures
 
-## TOTAL DES HEURES : 22H45 minutes
+## TOTAL DES HEURES : 26 heures
