@@ -1,6 +1,6 @@
 # StoryBoard-inscription
 
-![StoryBoard-inscription.png](StoryBoard-inscription.png)
+![StoryBoard-inscrition.png](StoryBoard-inscrition.png)
 
 # Storyboard du precessus de paiement
 
