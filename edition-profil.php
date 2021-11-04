@@ -1,9 +1,10 @@
 <?php
 
-$id = filter_var($_GET['membres'],FILTER_VALIDATE_INT); 
+$id = filter_input(INPUT_GET, 'membre' , FILTER_VALIDATE_INT);
 
 require_once "chemins.php";
 require CHEMIN_ACCESSEUR . "MembreDAO.php";
+
 $membre = MembreDAO::detaillerMembre($id);
 
 ?>
@@ -19,22 +20,21 @@ $membre = MembreDAO::detaillerMembre($id);
 <?php include "header.php"?>
 
 <body>
-	
-
     <form class="formulaire" action="">
         <div class="titre">
             <h1>nom de l'utilisateur</h1>
         </div>
-        <div class="form">
+        <div class="form" action="confirm-edition.php">
+            <input type="hidden" name="id" value="<?= $membre->id?>">
             <label for="nom" value>nom d'utilisateur</label><br>
-            <input type="text" id="nom" name="nom">
+            <input type="text" id="nom" name="nom" value="<?=$_SESSION["identifiant"]?>">
             <input class="boutton-envoyer" type="submit" value="Modifier">
         </div>
-        <div class="form">
-            <label for="mail">e-mail</label><br>
-            <input type="email" id="mail" name="mail">
+        <!--<div class="form">
+            <label for="mail">e-mail : <?=$membre->courriel?></label><br>
+            <input type="email" id="mail" name="mail" value="<?=$membre->courriel?>">
             <input class="boutton-envoyer" type="submit" value="Modifier">
-        </div>
+        </div>-->
         <div class="form">
             <label for="motDePass">mot de pass</label><br>
             <input type="password" id="motDePass" name="motDePass">

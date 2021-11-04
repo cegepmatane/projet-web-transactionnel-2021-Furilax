@@ -67,7 +67,7 @@ if(!$estConnecter && isset($_POST["action-connexion"])){
   if(!$estConnecter){ 
         header("Location: compte.php");    
     }else{ 
-            header("Location: edition-profil.php?membre=$membre->id");
+            header("Location: edition-profil.php");
     } 
      
 ?>
