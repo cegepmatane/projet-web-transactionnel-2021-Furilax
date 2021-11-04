@@ -20,18 +20,20 @@ $logo = LogoDAO::detaillerLogo($id);
 
 <?php include "header.php"?>
 <section id="conteneurGlobale">
-                    <div id="conteneurLogo">
-                    <img id="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="Synergy STRATA MANAGEMENT">
-                    </div>
-                    <div id="conteneurInfos">
-                        <h1><?=formater($logo->nom)?></h1>
-                        <div><p class="infosLogo"><?=formater($logo->description)?></p></div>
-                        <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
-                        <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
-                        <p class="infosLogo">Publication : <?=formater($logo->publication)?></p>
-                        <Button id="btnPanier">Ajouter au panier</Button>
-                    </div>
-            </section>
+    <div id="conteneurLogo">
+        <img id="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="Synergy STRATA MANAGEMENT">
+    </div>
+    <div id="conteneurInfos">
+        <h1><?=formater($logo->nom)?></h1>
+        <div><p class="infosLogo"><?=formater($logo->description)?></p></div>
+        <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
+        <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
+        <p class="infosLogo">Publication : <?=formater($logo->publication)?></p>
+        <form method="post" action="panier.php?action=add&id=<?=formater($logo->id)?>">
+            <input type="submit" id="btnPanier" value="Ajouter au panier">
+        </form>
+    </div>
+</section>
 </body>
 
 
