@@ -1,6 +1,6 @@
 <?php
 session_start();
-//$id = filter_var($_GET['logo'],FILTER_VALIDATE_INT); 
+$id = filter_var($_GET['logo'],FILTER_VALIDATE_INT); 
 require_once "chemins.php";
 require CHEMIN_ACCESSEUR . "LogoDAO.php";
 
@@ -10,10 +10,10 @@ if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
 	//code for adding product in cart
 	case "add":
-		$pid=$_GET["id"];
+		//$pid=$_GET["id"];
 		$result=mysqli_query($con,"SELECT * FROM logo WHERE id= '$pid'");
 		while($productByName=mysqli_fetch_array($result)){
-		$itemArray = array($productByName["nom"]=>array('nom'=>$productByName["nom"], 'prix'=>$productByName["prix"], 'image'=>$productByName["image"]));
+		$itemArray = array($productByName["nom"]=>array('nom'=>$productByName -> nom, 'prix'=>$productByName -> prix, 'image'=>$productByName -> image));
 		if(!empty($_SESSION["cart_item"])) {
 			if(in_array($productByName["nom"],array_keys($_SESSION["cart_item"]))) {
 				foreach($_SESSION["cart_item"] as $k => $v) {

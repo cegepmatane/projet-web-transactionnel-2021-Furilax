@@ -90,7 +90,7 @@ footer{
 	background:rgba(255,255,255,.1);
 }
 .connexion-form .groupe input[data-type="password"]{
-	text-security:circle;
+	-text-security:circle;
 	-webkit-text-security:circle;
 }
 .connexion-form .groupe .label{
