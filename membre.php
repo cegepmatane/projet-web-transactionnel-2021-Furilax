@@ -33,14 +33,19 @@ if(!$estConnecter && isset($_POST["action-inscription"])){
     }*/
     else{
         $reussite = MembreDAO::inscrireUnMembre($_POST);
+        ini_set("SMTP", "pickyourlogo.org");//confirm smtp
+        $to = $_POST["courriel"];
+        $subject = "Confirmation d'inscription";
+        $message = "Vous avez bien été inscrit sur Pick your logo";
+        $from = "pickyourlogo@hotmail.com";
+        $headers = "From: $from";
+        $success = mail($to,$subject,$message);
+        if (!$success) {
+            $errorMessage = error_get_last()['message'];
+        }
     }
 
-    if($reussite){
-        echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='compte.php'>connecter</a></p>
-       </div>";
-    }
+        
 }
 
 if(!$estConnecter && isset($_POST["action-connexion"])){
