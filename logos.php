@@ -1,6 +1,11 @@
 <?php
+session_start();
 require_once "chemins.php";
 require CHEMIN_ACCESSEUR . "LogoDAO.php";
+
+require "avisClient.php";
+$uid = session_id();
+
 $listeLogos = LogoDAO::listerLogos();
 //print_r($listeProduits);
 ?>
@@ -8,56 +13,27 @@ $listeLogos = LogoDAO::listerLogos();
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style/logos.css?=21">
-
-	<style>
-		ul {
-			margin: 0px;
-			padding: 10px 0px 0px 0px;
-		}
-
-		li.star {
-			list-style: none;
-			display: inline-block;
-			margin-right: 5px;
-			cursor: pointer;
-			color: #9E9E9E;
-		}
-
-		li.star.selected {
-			color: #ff6e00;
-		}
-
-		.row-title {
-			font-size: 20px;
-			color: #00BCD4;
-		}
-
-		.review-note {
-			font-size: 12px;
-			color: #999;
-			font-style: italic;
-		}
-		.row-item {
-			margin-bottom: 20px;
-			border-bottom: #F0F0F0 1px solid;
-		}
-		p.text-address {
-			font-size: 12px;
-		}
-	</style>
+    <script src="script/evaluationEtoile.js"></script>
+	<link rel="stylesheet" href="style/logos.css?=23">
 </head>
 
 <?php include "header.php"?>
-
-<body onload="montrerDonneesLogo('obtenirDonneesLogo.php')">
 
 	<section id="conteneurListe">
 
 	<h1>Nos Produits</h1>
 
 	<?php
-				foreach($listeLogos as $logo){       
+	if (isset($_POST["pid"]) && isset($_POST["stars"])) {
+		if ($_STARS->save($_POST["pid"], $uid, $_POST["stars"])) {
+		  echo "<div class='note' style='display: none;'>Évaluation remise</div>";
+		} else { echo "<div class='note'>$_STARS->error</div>"; }
+	  }
+	  
+	  $average = $_STARS->avg(); // La moyenne des avis
+	  $ratings = $_STARS->get($uid); // Les avis pour l'utilisateur
+
+				foreach($listeLogos as $pid=>$logo){       
 	?>
 				<div class="logo">
 					<a href="logo.php?logo=<?=$logo->id?>">
@@ -65,76 +41,31 @@ $listeLogos = LogoDAO::listerLogos();
 					</a>
 					<h2><?=formater($logo->nom)?></h2>
 					<p class = "descriptionLogo"><?=formater($logo->description)?></p>
-					<span id="listeLogo"></span>
+  					<div class="pReview">Avis Clients</div>
+					<div class="pStar" data-pid="<?=$pid?>"><?php
+						$rate = isset($ratings[$pid]) ? $ratings[$pid] : 0 ;
+						for ($i=1; $i<=5; $i++) {
+						$css = $i<=$rate ? "star" : "star blank" ;
+						echo "<div class='$css' data-i='$i'></div>";
+						}
+					?></div>
+					<div class="pStat">
+						<?=$average[$pid]["avg"]?> sur 5 étoiles.
+					</div>
+					<div class="pStat">
+						<?=$average[$pid]["num"]?> avis clients.
+					</div>
 				</div>
 		</section>
 	<?php
 		}
 	?>
 
-	<script type="text/javascript">
-		function montrerDonneesLogo(url) {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function () {
-				if (this.readyState == 4 && this.status == 200)
-				{
-					document.getElementById("listeLogo").innerHTML = this.responseText;
-				}
-			};
-			xhttp.open("GET", url, true);
-			xhttp.send();
-    	} 
-
-		function ajouterEvaluation(idLogo, evaluation) {
-			var xhttp = new XMLHttpRequest();
-
-			xhttp.onreadystatechange = function() {
-				if(this.readyState == 4 && this.status == 200) {
-					montrerDonneesLogo('obtenirDonneesLogo.php');
-
-					if(this.responseText != "success") {
-						alert(this.responseText);
-					}
-				}
-			};
-
-			xhttp.open("POST", "ajoutEvaluation.php", true);
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			var parametres = "index=" + evaluation + "&idLogo=" + idLogo;
-			xhttp.send(parametres);
-		}
-
-		function evalUtilisateur($idUtilisateur, $idLogo, $conn)
-		{
-			$average = 0;
-			$avgQuery = "SELECT evaluation FROM evaluation WHERE idUtilisateur = '" . $idUtilisateur . "' and idLogo = '" . $idLogo . "'";
-			$total_row = 0;
-			
-			if ($resultat = mysqli_query($conn, $avgQuery)) {
-				$total_row = mysqli_num_rows($resultat);
-			} 
-
-			if ($total_row > 0) {
-				foreach ($resultat as $row) {
-					$average = round($row["evaluation"]);
-				} 
-			} 
-			return $average;
-		}
-    
-		function evalTotal($idLogo, $conn)
-		{
-			$totalVotesQuery = "SELECT * FROM evaluation WHERE idLogo = '" . $idLogo . "'";
-			
-			if ($resultat = mysqli_query($conn, $totalVotesQuery)) {
-				$rowCount = mysqli_num_rows($resultat);
-				mysqli_free_result($resultat);
-			}
-			
-			return $rowCount;
-		}
-	</script>
-
+	<form id="ninForm" method="post" target="_self">
+		<input id="ninPdt" type="hidden" name="pid"/>
+		<input id="ninStar" type="hidden" name="stars"/>
+	</form>
+	
 </body>
 
 <?php include "footer.php"?>
