@@ -1,29 +1,4 @@
 <?php
-session_start();
-require_once "chemins.php";
-require CHEMIN_ACCESSEUR . "LogoDAO.php";
-
-require "avisClient.php";
-$uid = session_id();
-
-$listeLogos = LogoDAO::listerLogos();
-//print_r($listeProduits);
-?>
-<!doctype html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-    <script src="script/evaluationEtoile.js"></script>
-	<link rel="stylesheet" href="style/logos.css?=23">
-</head>
-
-<?php include "header.php"?>
-
-	<section id="conteneurListe">
-
-	<h1>Nos Produits</h1>
-
-	<?php
 	if (isset($_POST["pid"]) && isset($_POST["stars"])) {
 		if ($_STARS->save($_POST["pid"], $uid, $_POST["stars"])) {
 		  echo "<div class='note' style='display: none;'>Évaluation remise</div>";
@@ -65,7 +40,3 @@ $listeLogos = LogoDAO::listerLogos();
 		<input id="ninPdt" type="hidden" name="pid"/>
 		<input id="ninStar" type="hidden" name="stars"/>
 	</form>
-	
-</body>
-
-<?php include "footer.php"?>
