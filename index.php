@@ -1,8 +1,17 @@
 <?php
 require_once "chemins.php";
 require CHEMIN_ACCESSEUR . "LogoDAO.php";
+require "traduction.php";
 $listeLogos = LogoDAO::nouveautesLogos();
 //print_r($listeProduits);
+$locale = "en_US";
+putenv("LANG=$locale");
+putenv("LANGUAGE=$locale");
+setlocale(LC_ALL, $locale);
+$domain = 'messages';
+textdomain($domain);
+bindtextdomain($domain,'locales');
+bind_textdomain_codeset($domain,'UTF-8');
 ?>
 
 <!doctype html>

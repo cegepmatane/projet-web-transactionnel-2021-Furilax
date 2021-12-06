@@ -57,7 +57,6 @@ class LogoDAO extends Accesseur implements LogoSQL{
 
     public static function ajouterLogo($logo)
     {
-
         LogoDAO::initialiser();
 
         $requeteAjouterLogo = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_AJOUTER_LOGO); 
@@ -66,9 +65,8 @@ class LogoDAO extends Accesseur implements LogoSQL{
         $requeteAjouterLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
         $requeteAjouterLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
         $requeteAjouterLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
-
-        //$requeteAjouterLogo->bindParam(':image', $logo['image'], PDO::PARAM_STR);
-    
+        $requeteAjouterLogo->bindParam(':image', $logo['image'], PDO::PARAM_STR);
+        
         $reussiteAjout = $requeteAjouterLogo -> execute();
         return $reussiteAjout;
     }

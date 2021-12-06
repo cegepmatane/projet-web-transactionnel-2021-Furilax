@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-12-06 12:54-0500\n"
+"PO-Revision-Date: 2021-12-06 13:05-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: compte.php\n"
+"X-Poedit-SearchPath-1: footer.php\n"
+"X-Poedit-SearchPath-2: header.php\n"
+"X-Poedit-SearchPath-3: index.php\n"
+"X-Poedit-SearchPath-4: logo.php\n"
+"X-Poedit-SearchPath-5: logos.php\n"
+"X-Poedit-SearchPath-6: mission.php\n"
+
+#: compte.php:12 footer.php:14
+msgid "Connexion"
+msgstr "Login"
+
+#: compte.php:13
+msgid "Inscription"
+msgstr "Sign up"
+
+#: compte.php:18 compte.php:37
+msgid "Identifiant"
+msgstr "Username"
+
+#: compte.php:22 compte.php:41
+msgid "Mot de passe"
+msgstr "Password"
+
+#: compte.php:30
+msgid "Mot de passe oublier?"
+msgstr "Forgot password?"
+
+#: compte.php:45
+msgid "Confirmer Mot de passe"
+msgstr "Confirm Password"
+
+#: compte.php:49
+msgid "Adresse courriel"
+msgstr "Email address"
+
+#: footer.php:11 header.php:11
+msgid "Accueil"
+msgstr "Home"
+
+#: footer.php:12
+msgid "Mission"
+msgstr "Mission"
+
+#: footer.php:13
+msgid "Produit"
+msgstr "Product"
+
+#: header.php:12
+msgid "Notre Mission"
+msgstr "Our Mission"
+
+#: header.php:13
+msgid "Nos Produits"
+msgstr "Our Products"
+
+#: header.php:14
+msgid "Compte"
+msgstr "Account"
+
+#: index.php:22
+msgid "Bienvenue sur Pick Your Logo"
+msgstr "Welcome on Pickyour Your Logo"
+
+#: index.php:26
+msgid "Selectionnez..."
+msgstr "Select..."
+
+#: index.php:27
+msgid ""
+"Pick Your Logo vous propose un large choix de modeles de logos pour tout les "
+"gouts !"
+msgstr ""
+"Pick Your Logo is here to offer you a large variety of logos for everyones "
+"taste !"
+
+#: index.php:30
+msgid "Personnalisez..."
+msgstr "Edit..."
+
+#: index.php:31
+msgid ""
+"Apres avoir choisi votre logo qui correspond a vos attentes, vous pouvez le "
+"personnaliser et l'habiller a votre gout !"
+msgstr ""
+"After picking the right logo for your demands, you can edit it to your "
+"liking !"
+
+#: index.php:34
+msgid "Achetez !"
+msgstr "Buy !"
+
+#: index.php:35
+msgid ""
+"Maintenant que votre logo est pret a arborer les plus belles devantures de "
+"votre magasin et de votre site internet,\n"
+"\t\t\t\t\tvous n'avez plus qu'a proceder a l'achat et soutenir nos "
+"graphistes !"
+msgstr ""
+"Now that your logo is ready to represent your company, all you have to do is "
+"proceed to the transaction and support our designers !"
+
+#: index.php:44
+msgid "Les nouveautes de la semaine !"
+msgstr "New logos of the week !"
+
+#: mission.php:17
+msgid "Notre Mission !"
+msgstr "Our Mission!"
+
+#: mission.php:23
+msgid ""
+"La mission de notre equipe est de proposer des logos et des images de droit "
+"d'auteur pour faciliter\n"
+"                    les jeunes entrepreneurs a se lancer dans le monde du "
+"travail. Notre site possede un large choix de\n"
+"                    logos customisables a differents tarifs afin de "
+"satisfaire un maximum de clientele."
+msgstr ""
+"Our teams mission is to offer the best logos for new entrepreneurs to start "
+"their careers. Our website offers a vast amount of choice as well as the "
+"option to customize the logos we offer to your liking."
