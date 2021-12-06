@@ -8,10 +8,10 @@
 		
 		
 		<ul id="nav">
-			<li><a href="index.php">Accueil</a></li>
-			<li><a href="mission.php">Notre Mission</a></li>
-			<li><a href="logos.php">Nos Produits</a></li>
-			<li><a href="membre.php">Compte</a></li>
+			<li><a href="index.php"><?php echo _("Accueil")?></a></li>
+			<li><a href="mission.php"><?php echo _("Notre Mission")?></a></li>
+			<li><a href="logos.php"><?php echo _("Nos Produits")?></a></li>
+			<li><a href="membre.php"><?php echo _("Compte")?></a></li>
 			<li style="float:right"><a href="panier.php" class="active">Votre Panier</a></li>
 		</ul>
 

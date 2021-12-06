@@ -27,7 +27,7 @@ $logo = LogoDAO::detaillerLogo($id);
         <h1><?=formater($logo->nom)?></h1>
         <div><p class="infosLogo"><?=formater($logo->description)?></p></div>
         <p class="infosLogo">Auteur : <?=formater($logo->auteur)?></p>
-        <p class="infosLogo">Prix : <?=formater($logo->prix)?></p>
+        <p class="infosLogo">Prix : <?=formater($logo->prix)?>$</p>
         <p class="infosLogo">Publication : <?=formater($logo->publication)?></p>
         <form method="post" action="panier.php?action=add&id=<?=formater($logo->id)?>">
             <input type="submit" id="btnPanier" value="Ajouter au panier">
