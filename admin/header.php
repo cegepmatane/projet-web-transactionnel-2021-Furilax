@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style/index.css">
+<link rel="stylesheet" href="../style/index.css">
 <body>
 	<header lang="fr">
 		<meta charset="utf-8">

@@ -8,10 +8,10 @@
         <a href="#" class="fa fa-snapchat"></a>
     </div>
         <ul>
-            <li><a href="index.php">Acceuil</a></li>
-            <li><a href="mission.php">Mission</a></li>
-            <li><a href="produit.php">Produit</a></li>
-            <li><a href="#connexion">Connexion</a></li>
+            <li><a href="index.php"><?php echo _("Accueil")?></a></li>
+            <li><a href="mission.php"><?php echo _("Mission")?></a></li>
+            <li><a href="produit.php"><?php echo _("Produit")?></a></li>
+            <li><a href="#connexion"><?php echo _("Connexion")?></a></li>
         </ul>
         <p class="copyright">Pick your Logo © 2021</p>
     </div>    

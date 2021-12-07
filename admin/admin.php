@@ -9,13 +9,12 @@ $listeLogos = LogoDAO::listerLogos();
 <link rel="stylesheet" href="style/footer.css">
 <link rel="stylesheet" href="style/admin.css">
 <link rel="stylesheet" href="style/logos.css?=21">
-
 <head>
 	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
 </head>
 
-<?php include "../header.php"?>
+<?php include "header.php"?>
 
 	<h1>Produits</h1>
 	<div class="centrer">

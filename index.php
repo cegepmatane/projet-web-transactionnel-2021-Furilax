@@ -1,8 +1,17 @@
 <?php
 require_once "chemins.php";
 require CHEMIN_ACCESSEUR . "LogoDAO.php";
+require "traduction.php";
 $listeLogos = LogoDAO::nouveautesLogos();
 //print_r($listeProduits);
+$locale = "en_US";
+putenv("LANG=$locale");
+putenv("LANGUAGE=$locale");
+setlocale(LC_ALL, $locale);
+$domain = 'messages';
+textdomain($domain);
+bindtextdomain($domain,'locales');
+bind_textdomain_codeset($domain,'UTF-8');
 ?>
 
 <!doctype html>
@@ -19,21 +28,21 @@ $listeLogos = LogoDAO::nouveautesLogos();
 	<section id="contenu">
 
 		<div id="description">
-			<h1>Bienvenue sur Pick Your Logo</h1>
+			<h1><?php echo _("Bienvenue sur Pick Your Logo")?></h1>
 			<hr>
 
 			<div class="colonne">
-				<h2>Sélectionnez...</h2>
-				<p>Pick Your Logo vous propose un large choix de modèles de logos pour tout les goûts !</p>
+				<h2><?php echo _("Selectionnez...")?></h2>
+				<p><?php echo _("Pick Your Logo vous propose un large choix de modeles de logos pour tout les gouts !")?></p>
 			</div>
 			<div class="colonne">
-				<h2>Personnalisez...</h2>
-				<p>Après avoir choisi votre logo qui correspond à vos attentes, vous pouvez le personnaliser et l'habiller à votre goût !</p>
+				<h2><?php echo _("Personnalisez...")?></h2>
+				<p><?php echo _("Apres avoir choisi votre logo qui correspond a vos attentes, vous pouvez le personnaliser et l'habiller a votre gout !")?></p>
 			</div>
 			<div class="colonne">
-				<h2>Achetez !</h2>
-				<p>Maintenant que votre logo est prêt à arborer les plus belles devantures de votre magasin et de votre site internet,
-					vous n'avez plus qu'à procéder à l'achat et soutenir nos graphistes !
+				<h2><?php echo _("Achetez !")?></h2>
+				<p><?php echo _("Maintenant que votre logo est pret a arborer les plus belles devantures de votre magasin et de votre site internet,
+					vous n'avez plus qu'a proceder a l'achat et soutenir nos graphistes !")?>
 				</p>
 			</div>
 
@@ -41,7 +50,7 @@ $listeLogos = LogoDAO::nouveautesLogos();
 
 
 		<section id="conteneurListe">
-			<h1 class="font-effect-neon">Les nouveautés de la semaine !</h1>
+			<h1 class="font-effect-neon"><?php echo _("Les nouveautes de la semaine !")?></h1>
 
 <?php
         foreach($listeLogos as $logo){       
