@@ -5,12 +5,10 @@ $listeLogos = LogoDAO::listerLogos();
 ?>
 
 <!doctype html>
-<html lang="fr">
 <link rel="stylesheet" href="style/footer.css">
 <link rel="stylesheet" href="style/admin.css">
 <link rel="stylesheet" href="style/logos.css?=21">
 <head>
-	<meta charset="utf-8">
 	<title>PickYourLogo - Accueil</title>
 </head>
 
@@ -25,14 +23,14 @@ $listeLogos = LogoDAO::listerLogos();
 	<section id="conteneurListe">
 
 		<?php
-        foreach($listeLogos as $logo){       
+        foreach($listeLogos as $logo){
 	?>
 		<div class="logo">
 			<a href="logo.php?logo=<?=$logo->id?>">
-				<img class="imageLogo" src="illustration/<?=formater($logo->image)?>" alt="">
+				<img class="imageLogo" src="../illustration/<?=$logo->image?>" alt="">
 			</a>
 			<h2><?=formater($logo->nom)?></h2>
-			<p class="descriptionLogo"><?=formater($logo->description)?></p>
+			 <p class="descriptionLogo"><?=formater($logo->description)?></p>
 			<a href="modifier.php?id=<?=($logo->id)?>"><button type="button" class="btn modifier">Modifier</button></a>
 			<a href="traitement-supprimer.php?id=<?=($logo->id)?>"><button type="button"
 					class="btn supprimer">Supprimer</button></a>
