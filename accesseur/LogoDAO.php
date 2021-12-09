@@ -63,7 +63,8 @@ class LogoDAO extends Accesseur implements LogoSQL{
     
         $requeteAjouterLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_STR);
         $requeteAjouterLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
-        $requeteAjouterLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
+        $desk = formater($logo['description']);
+        $requeteAjouterLogo->bindParam(':description', $desk, PDO::PARAM_STR);
         $requeteAjouterLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
         $requeteAjouterLogo->bindParam(':image', $logo['image'], PDO::PARAM_STR);
         
@@ -74,9 +75,7 @@ class LogoDAO extends Accesseur implements LogoSQL{
     public static function lireLogo($id)
     {
         LogoDAO::initialiser();
-        
-        $id= filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
-
+    
         $requeteLireLogo = LogoDAO::$basededonnees->prepare(LogoDAO::SQL_LIRE_LOGO);
         $requeteLireLogo-> bindParam(':id',$id,PDO::PARAM_INT);
         $requeteLireLogo->execute();
@@ -91,7 +90,8 @@ class LogoDAO extends Accesseur implements LogoSQL{
 
         $requeteLogo->bindParam(':nom', $logo['nom'], PDO::PARAM_STR);
         $requeteLogo->bindParam(':auteur', $logo['auteur'], PDO::PARAM_STR);
-        $requeteLogo->bindParam(':description', $logo['description'], PDO::PARAM_STR);
+        $decriptDescription = formater($logo['description']);
+        $requeteLogo->bindParam(':description', $decriptDescription, PDO::PARAM_STR);
         $requeteLogo->bindParam(':prix', $logo['prix'], PDO::PARAM_STR);
         $requeteLogo->bindParam(':id', $logo['id'], PDO::PARAM_INT);
         
@@ -111,9 +111,6 @@ class LogoDAO extends Accesseur implements LogoSQL{
 
 function formater($texte)
 {
-//$texte = html_entity_decode($texte,ENT_COMPAT,'UTF-8');
-//$texte = htmlentities($texte,ENT_COMPAT,'UTF');
-return $texte;
-
+return urldecode($texte);
 }
 ?>

@@ -9,10 +9,9 @@ $logo = LogoDAO::lireLogo($id);
 
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="produits.css">
-<link rel="stylesheet" href="../footer/footer.css">
-<link rel="stylesheet" href="ajouter&modifier.css">
-
+<link rel="stylesheet" href="style/produits.css">
+<link rel="stylesheet" href="style/footer.css">
+<link rel="stylesheet" href="style/ajouter&modifier.css">
 <head>
     <meta charset="utf-8">
     <title>PickYourLogo - Ajouter ou Modifier</title>
@@ -20,7 +19,7 @@ $logo = LogoDAO::lireLogo($id);
 
 <body>
     <header>
-    <?php include "../header.php"?>;
+    <?php include "header.php"?>;
 
     </header>
     <h1>Modifier</h1>
@@ -30,7 +29,7 @@ $logo = LogoDAO::lireLogo($id);
         action="traitement-modifier.php"
         method="POST">
         
-        <input type="hidden" name="id" value="<?= $logo["id"]?>">
+        <input type="text" name="id" value="<?= $logo['id']?>">
         <div class="form">
             <label for="nom" value>Nom du logo</label><br>
             <input type="text" id="nom" name="nom"
@@ -43,8 +42,7 @@ $logo = LogoDAO::lireLogo($id);
         </div>
         <div class="form">
             <label for="description">Description du produit</label><br>
-            <textarea name="description" id="description" 
-            value="<?= $logo["description"]?>" cols="60" rows="5"></textarea><br>
+            <textarea name="description" id="descriptio"  cols="60" rows="5"><?= $logo['description']?></textarea><br>
         </div>
         <div class="form">
             <label for="image">Image</label><br>

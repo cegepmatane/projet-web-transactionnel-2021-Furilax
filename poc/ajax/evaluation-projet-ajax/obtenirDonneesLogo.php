@@ -5,7 +5,7 @@ require_once "fonctionsEvaluation.php";
 
 $idUtilisateur = 1;
 
-$query = "SELECT * FROM evaluation ORDER BY id DESC";
+$query = "SELECT * FROM avis ORDER BY id DESC";
 $resultat = mysqli_query($conn, $query);
 
 $outputString = '';

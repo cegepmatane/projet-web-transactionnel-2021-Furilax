@@ -2,8 +2,6 @@
 <html lang="fr">
 <link rel="stylesheet" href="style/produits.css">
 <link rel="stylesheet" href="style/footer.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="stylesheet" href="style/ajouter&modifier.css">
 
 <head>
@@ -30,7 +28,7 @@
         </div>
         <div class="champs">
             <label for="description">Description du produit</label><br>
-            <textarea name="descriptio" id="descriptio" cols="60" rows="5"require></textarea><br>
+            <textarea name="description" id="descriptio" cols="60" rows="5"require></textarea>
         </div>
         <div class="champs">
             <label for="fichierAUpload">Image</label><br>
