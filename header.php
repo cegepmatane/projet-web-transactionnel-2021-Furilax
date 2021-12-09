@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style/index.css">
 <body>
 	<header lang="fr">
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<div class="parallax">
 			<center><b>Pick Your Logo</b></center>
 		</div>
