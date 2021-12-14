@@ -33,7 +33,7 @@
         xhttp.send(parametres);
     }
 
-    function evalUtilisateur($idUtilisateur, $idLogo, $conn)
+    /*function evalUtilisateur($idUtilisateur, $idLogo, $conn)
     {
         $average = 0;
         $avgQuery = "SELECT evaluation FROM evaluation WHERE idUtilisateur = '" . $idUtilisateur . "' and idLogo = '" . $idLogo . "'";
@@ -61,7 +61,7 @@
         }
         
         return $rowCount;
-    }
+    }*/
 
 
 </script>
